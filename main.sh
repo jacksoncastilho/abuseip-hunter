@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-readonly API_KEY=key
+readonly API_KEY=#api_key_here!
 
 _check(){
     local response=$(curl -G -s https://api.abuseipdb.com/api/v2/check \
@@ -12,7 +12,7 @@ _check(){
 
     local abuseConfidenceScore=$(echo $response | egrep -o "\"abuseConfidenceScore\":[0-9]+," | egrep -o "[0-9]+")
 
-    [[ $totalReports -gt 0 ]] && echo '$1 was found in our database with score $abuseConfidenceScore\%'
+    [[ $totalReports -gt 0 ]] && echo "$1 was found in our database with score $abuseConfidenceScore%"
 }
 
 for ip in $(cat $1); do
