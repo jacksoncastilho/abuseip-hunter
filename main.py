@@ -1,10 +1,12 @@
 #! /usr/bin/python
 
-import requests
-import json
-import argparse
+# - [x] pint message
+# - [ ] read file
+# - [ ] end credits
 
-API_KEY = "api_key_here!"
+
+import requests
+import argparse
 
 parser = argparse.ArgumentParser()
 
@@ -20,10 +22,9 @@ querystring = {
 
 headers = {
     'Accept': 'application/json',
-    'Key': 'API_KEY'
+    'Key': 'a3649d5dbef218921e983faef320b81b5e52de714c30c268e4ab9a5abdb0a1086a12279d73be7a0d'
 }
 
-response = requests.request(method='GET', url=url, headers=headers, params=querystring)
+r = requests.get(url, headers=headers, params=querystring).json()
 
-decodedResponse = json.loads(response.text)
-print(json.dumps(decodedResponse, sort_keys=True, indent=4))
+print(f"{r['data']['ipAddress']} was reported {r['data']['totalReports']} times. Confidence of Abuse is {r['data']['abuseConfidenceScore']}%")

@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-readonly API_KEY=#api_key_here!
+readonly API_KEY=a3649d5dbef218921e983faef320b81b5e52de714c30c268e4ab9a5abdb0a1086a12279d73be7a0d
 
 _check(){
     local response=$(curl -G -s https://api.abuseipdb.com/api/v2/check \
