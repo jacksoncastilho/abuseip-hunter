@@ -13,7 +13,7 @@ import argparse
 import sys
 
 URL = 'https://api.abuseipdb.com/api/v2/check'
-API_KEY = '351cb53585f43f957aab7acc5ad77afe8331d0a14ca2e2e0b53fe405c7183a186b3ddd379750d0fc'
+API_KEY = ''
 
 parser = argparse.ArgumentParser()
 
@@ -41,6 +41,5 @@ try:
             break
 except Exception as err:
     print(f"An exception occurred!\n{err}")
-#finally:
-#    f.close()
+f.close()
 
