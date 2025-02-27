@@ -52,8 +52,9 @@ except Exception as err:
     print(err)
 
 for ip in ips:
-    for api as getApi()['data']:
-       checkIpReputation(ip, api)
-
+    for apis in getApi()['data']:
+        for api in apis.keys():
+            print(api)
+            #checkIpReputation(ip, api)
 ips.close()
     
