@@ -1,0 +1,4 @@
+apis:
+  - abuseipdb:
+      url: 'https://api.abuseipdb.com/api/v2/check'
+      key: ''
