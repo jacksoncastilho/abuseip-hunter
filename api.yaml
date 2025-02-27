@@ -1,4 +1,4 @@
-data:
+apis:
   - abuseipdb:
       url: 'https://api.abuseipdb.com/api/v2/check'
-      key: 'bc696d1998637ddbe01071992bf6410561f36224e8e978f1e40d5a1483aa04e4de3d6ae3ff73f9d5'
+      key: ''
